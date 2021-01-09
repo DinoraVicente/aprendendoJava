@@ -1,4 +1,6 @@
-public class funcoesMatematicas {
+package estudos;
+
+public class FuncoesMatematicas {
 
     public static void main(String [] args) {
 

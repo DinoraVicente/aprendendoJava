@@ -1,6 +1,8 @@
+package estudos;
+
 import java.util.Scanner;
 
-public class entradaDados {
+public class EntradaDados {
 
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
