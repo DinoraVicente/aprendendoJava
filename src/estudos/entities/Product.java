@@ -1,4 +1,4 @@
-package entities;
+package estudos.entities;
 
 public class Product {
     public String name;

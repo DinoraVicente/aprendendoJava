@@ -1,6 +1,6 @@
-package application;
+package estudos.application;
 
-import entities.Product;
+import estudos.entities.Product;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -19,14 +19,24 @@ public class ProductsProgram {
         product.price = sc.nextDouble();
         System.out.print("Quantity in stock: ");
         product.quantity = sc.nextInt();
+
+        System.out.println();
         System.out.printf("Product data: %s%n", product);
 
+        System.out.println();
         System.out.println("Enter the number of products to be added in stock: ");
-        product.addProducts(sc.nextInt());
+        int quantity = sc.nextInt();
+        product.addProducts(quantity);
+
+        System.out.println();
         System.out.printf("Updated data: %s%n", product);
 
+        System.out.println();
         System.out.println("Enter the number of products to be removed from stock: ");
-        product.removeProducts(sc.nextInt());
+        quantity = sc.nextInt();
+        product.removeProducts(quantity);
+
+        System.out.println();
         System.out.printf("Updated data: %s%n", product);
 
         sc.close();
