@@ -1,6 +1,6 @@
-package application;
+package estudos.application;
 
-import entities.Student;
+import estudos.entities.Student;
 
 import java.util.Locale;
 import java.util.Scanner;
