@@ -5,7 +5,7 @@ import estudos.util.Calculator;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class ProgramaCalculator1 {
+public class ProgramaCalculator {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
