@@ -1,11 +1,11 @@
 package estudos.application;
 
-import estudos.entities.ProductMelhoria;
+import estudos.entities.ProductConstructor;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class ProgramProductsMelhoria {
+public class ProgramProductsConstructor {
     public static void main(String [] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class ProgramProductsMelhoria {
         System.out.print("Quantity in stock: ");
         int quantity = sc.nextInt();
 
-        ProductMelhoria product = new ProductMelhoria(name, price, quantity);
+        ProductConstructor product = new ProductConstructor(name, price, quantity);
 
         System.out.println();
         System.out.printf("Product data: %s%n", product);
