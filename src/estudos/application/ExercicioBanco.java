@@ -1,6 +1,6 @@
-package application;
+package estudos.application;
 
-import entities.Banco;
+import estudos.entities.Banco;
 
 import java.util.Scanner;
 

@@ -1,4 +1,6 @@
-package entities;
+package estudos.entities;
+
+import estudos.entities.Produtos;
 
 import java.util.Date;
 

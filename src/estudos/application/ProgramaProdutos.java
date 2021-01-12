@@ -1,6 +1,6 @@
-package application;
+package estudos.application;
 
-import entities.Produtos;
+import estudos.entities.Produtos;
 
 import java.util.Scanner;
 
