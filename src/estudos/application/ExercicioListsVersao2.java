@@ -1,12 +1,12 @@
-package application;
+package estudos.application;
 
-import entities.Employee2;
+import estudos.entities.Employee2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ExercicioLists {
+public class ExercicioListsVersao2 {
     public static void main(String [] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -18,7 +18,7 @@ public class ExercicioLists {
             System.out.println();
             System.out.println("Employee #" + (i+1));
             System.out.print("Id: ");
-            Integer id = sc.nextInt();
+            int id = sc.nextInt();
 
             while (hasId(list, id)){
                 System.out.println("ID already taken! Try again: ");
@@ -29,7 +29,7 @@ public class ExercicioLists {
             sc.nextLine();
             String name = sc.nextLine();
             System.out.print("Salary: ");
-            Double salary = sc.nextDouble();
+            double salary = sc.nextDouble();
 
             Employee2 emp = new Employee2(id, name, salary);
             list.add(emp);
@@ -38,13 +38,16 @@ public class ExercicioLists {
         System.out.println();
         System.out.println("Enter the employee id that will have salary increase: ");
         int idSalary = sc.nextInt();
-        Integer pos = idPosition(list, idSalary);
-        if(pos == null){
+
+        // Achar a posição do ID
+        Employee2 emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
+
+        if(emp == null){
             System.out.println("This ID does not exist!");
         } else {
             System.out.println("Enter the percentage: ");
             double percentage = sc.nextDouble();
-            list.get(pos).increseSalary(percentage);
+            emp.increseSalary(percentage);
         }
 
         System.out.println();
@@ -55,15 +58,7 @@ public class ExercicioLists {
 
         sc.close();
     }
-
-    public static Integer idPosition(List<Employee2> list, int id){
-        for(int i=0;i<list.size(); i++){
-            if(list.get(i).getId() == id){
-                return i;
-            }
-        }
-        return null;
-    }
+    // Verificar se o ID existe.
     public static boolean hasId(List<Employee2> list, int id){
         Employee2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
         return emp != null;

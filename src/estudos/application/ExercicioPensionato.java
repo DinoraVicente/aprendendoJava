@@ -15,7 +15,7 @@ public class ExercicioPensionato {
 
         for (int i=1; i<=n; i++){
             System.out.println();
-            System.out.printf("Aluguel #%d: ", i);
+            System.out.printf("Aluguel #%d: %n", i);
             System.out.print("Nome: ");
             sc.nextLine();
             String name = sc.nextLine();

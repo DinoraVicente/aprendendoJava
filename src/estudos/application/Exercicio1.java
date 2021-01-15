@@ -1,4 +1,4 @@
-package estudos;
+package estudos.application;
 
 import java.util.Locale;
 

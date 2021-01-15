@@ -1,4 +1,4 @@
-package estudos;
+package estudos.application;
 
 public class OperadoresBitwise {
     public static void main(String [] args) {

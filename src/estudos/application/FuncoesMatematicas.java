@@ -1,4 +1,4 @@
-package estudos;
+package estudos.application;
 
 public class FuncoesMatematicas {
 
